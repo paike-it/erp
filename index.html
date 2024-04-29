@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="派克ERP帮助文档">
+	<meta name="keywords" content="paike,erp,电商">
+	<title>派克ERP - 帮助文档</title>
+	<link rel="icon" href="image/favicon.ico">
+	<link rel="stylesheet" href="css/vue@4.13.0.css">
+</head>
+<body>
+	<!-- 绑定元素 -->
+	<div id="app">加载中...</div>
+
+	<!-- docsify文档定义 -->
+	<script>
+		window.$docsify = {
+			// 文档名称
+			name: "派克ERP",
+			// 文档加载的根路径，可以是二级路径或者是其他域名的路径
+			// 这里用相对路径，让文档支持在子仓库页中可正常显示
+			basePath: "./docs/",
+			// 启用相对路径
+			relativePath: false,
+			// 启用封面；加载 _coverpage.md
+			coverpage: true,
+			// 定制导航栏，加载 _navbar.md
+			loadNavbar: true,
+			// 定制侧边栏；加载 _sidebar.md
+			loadSidebar: true,
+			// 定制404页面，加载 _404.md
+			notFoundPage: true,
+			// 切换页面后是否自动跳转到页面顶部
+			auto2top: true,
+			// 执行文档里的第一个script标签里的脚本
+			executeScript: true,
+			// 小屏设备下合并导航栏到侧边栏
+			mergeNavbar: true,
+			// 最大支持渲染的标题层级
+			maxLevel: 4,
+			// 生成目录(侧边栏)的最大层级
+			subMaxLevel: 2,
+			// 格式化文档更新时间
+			formatUpdated: "{YYYY}/{MM}/{DD}",
+			// 定义路由别名，可以更自由的定义路由规则。支持正则。
+			alias: {
+				// 解决因浏览目录中文档时，会自动请求目录下的 _navbar.md _sidebar.md
+				"/.*/_navbar.md": "/_navbar.md",
+				"/.*/_sidebar.md": "/_sidebar.md"
+			},
+			// 自定义插件
+			plugins: [
+				function(hook, vm) {
+					hook.init(function() {
+						// 初始化完成后调用，只调用一次，没有参数。
+					});
+					hook.beforeEach(function(content) {
+						// 每次开始解析 Markdown 内容时调用
+						return content
+							+ "\n---"
+							+ "\n- 该文档更新于`{docsify-updated}`"
+							+ "\n- © 2024 [派克](https://paike.it) All Rights Reserved.";
+					});
+					hook.afterEach(function(html, next) {
+						// 解析成 html 后调用。
+						// beforeEach 和 afterEach 支持处理异步逻辑
+						// 异步处理完成后调用 next(html) 返回结果
+						next(html)
+					});
+					hook.doneEach(function() {
+						// 每次路由切换时数据全部加载完成后调用，没有参数。
+					});
+					hook.mounted(function() {
+						// 初始化并第一次加载完成数据后调用，只触发一次，没有参数。
+					})
+					hook.ready(function() {
+						// 初始化并第一次加载完成数据后调用，没有参数。
+					});
+				}
+			],
+
+			/* 插件配置项 */
+
+			// 全文搜索/search
+			search: {
+				// 过期时间，单位毫秒，默认一天
+				maxAge: 86400000,
+				// 路径
+				paths: "auto",
+				// 搜索提示
+				placeholder: "搜索...",
+				// 未搜索到显示
+				noData: "未搜索不相关内容！",
+				// 搜索标题的最大程级，1 - 6
+				depth: 4
+			},
+
+			// 复制代码到剪贴板/docsify-copy-code
+			copyCode: {
+				buttonText: "复制",
+				errorText: "错误",
+				successText: "成功"
+			}
+		}
+	</script>
+ 
+	<!-- Vue 为文档中数据绑定提供支持-->
+	<script src="https://cdnjs.loli.net/ajax/libs/vue/2.7.16/vue.min.js"></script>
+
+	<!-- Docsify核心(https://github.com/docsifyjs/docsify) -->
+	<script src="https://cdnjs.loli.net/ajax/libs/docsify/4.13.1/docsify.min.js"></script>
+
+	<!-- Docsify官方插件 -->
+	<!-- 全文搜索(https://github.com/docsifyjs/docsify/tree/develop/src/plugins/search) -->
+	<script src="https://cdnjs.loli.net/ajax/libs/docsify/4.13.1/plugins/search.min.js"></script>
+	<!-- emoji表情(https://github.com/docsifyjs/docsify/tree/develop/src/plugins) -->
+	<script src="https://cdnjs.loli.net/ajax/libs/docsify/4.13.1/plugins/emoji.min.js"></script>
+	<!-- 图片缩放(https://github.com/docsifyjs/docsify/tree/develop/src/plugins) -->
+	<script src="https://cdnjs.loli.net/ajax/libs/docsify/4.13.1/plugins/zoom-image.min.js"></script>
+	<!-- 外链脚本(https://github.com/docsifyjs/docsify/tree/develop/src/plugins) -->
+	<script src="https://cdnjs.loli.net/ajax/libs/docsify/4.13.1/plugins/external-script.min.js"></script>
+
+	<!-- Docsify第三方插件 -->
+  	<!-- 复制代码到剪贴板(https://github.com/jperasmus/docsify-copy-code) -->
+	<script src="https://cdnjs.loli.net/ajax/libs/docsify-copy-code/2.1.1/docsify-copy-code.min.js"></script>
+	<!-- kroki图表(https://github.com/zuisong/docsify-kroki) -->
+	<script src="https://fastly.jsdelivr.net/china/npm/docsify-kroki@1/dist/docsify-kroki.js"></script>
+
+	<!-- Prism代码高亮 -->
+	<!-- Prism(https://github.com/PrismJS/prism) -->
+	<script src="https://cdnjs.loli.net/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+	<!-- Markdown -->
+	<script src="https://cdnjs.loli.net/ajax/libs/prism/1.29.0/components/prism-markdown.min.js"></script>
+	<!-- INI -->
+	<script src="https://cdnjs.loli.net/ajax/libs/prism/1.29.0/components/prism-ini.min.js"></script>
+	<!-- JSON -->
+	<script src="https://cdnjs.loli.net/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
+	<!-- Nginx -->
+	<script src="https://cdnjs.loli.net/ajax/libs/prism/1.29.0/components/prism-nginx.min.js"></script>
+	<!-- JavaScript -->
+	<script src="https://cdnjs.loli.net/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+	<!-- CSS -->
+	<script src="https://cdnjs.loli.net/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+	<!-- CSS扩展 -->
+	<script src="https://cdnjs.loli.net/ajax/libs/prism/1.29.0/components/prism-css-extras.min.js"></script>
+	<!-- PHP -->
+	<script src="https://cdnjs.loli.net/ajax/libs/prism/1.29.0/components/prism-php.min.js"></script>
+	<!-- PHP扩展 -->
+	<script src="https://cdnjs.loli.net/ajax/libs/prism/1.29.0/components/prism-php-extras.min.js"></script>
+	<!-- SQL -->
+	<script src="https://cdnjs.loli.net/ajax/libs/prism/1.29.0/components/prism-sql.min.js"></script>
+
+	<!-- DogeCloud视频云服务 -->
+	<script src="https://player.dogecloud.com/js/loader"></script>
+</body>
+</html>
