@@ -11,10 +11,9 @@
 
 
 #### 链接
-- 帮助手册 - [https://paike-it.gitee.io/erp-help](https://paike-it.gitee.io/erp-help/)
-- 前端演示 - [https://paike-it.gitee.io/erp-client](https://paike-it.gitee.io/erp-client/)
-- 接口文档 - [https://paike-erp-server.apifox.cn](https://paike-erp-server.apifox.cn)
-- 建议反馈 - [https://txc.qq.com/products/635857](https://txc.qq.com/products/635857)
+- 帮助手册 - [https://erp.paike-it](https://erp.paike-it)
+- 前端演示 - [https://erp-demo.paike-it](https://erp-demo.paike-it)
+- 接口文档 - [https://erp-api.paike-it](https://erp-api.paike-it)
 
 
 #### 联系
