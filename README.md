@@ -1,3 +1,5 @@
-> 派克ERP - https://erp.paike.it
+# 派克ERP
 
-__永远相信美好的事情即将发生...__
+__https://erp.paike.it__
+
+> 永远相信美好的事情即将发生...
