@@ -5,5 +5,5 @@
 
 > 专注于电商业务解决方案
 
-[前端演示](https://paike-it.gitee.io/erp-client/)
+[前端演示](https://erp-demo.paike.it)
 [阅读更多](#派克ERP)
