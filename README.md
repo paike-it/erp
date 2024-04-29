@@ -1,5 +1,5 @@
 # 派克ERP
 
-__https://erp.paike.it__
+https://erp.paike.it
 
 > 永远相信美好的事情即将发生...
