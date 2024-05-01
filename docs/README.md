@@ -11,7 +11,7 @@
 
 
 #### 链接
-- 帮助手册 - [https://erp.paike-it](https://erp.paike-it)
+- 帮助文档 - [https://erp.paike-it](https://erp.paike-it)
 - 前端演示 - [https://erp-demo.paike-it](https://erp-demo.paike-it)
 - 接口文档 - [https://erp-api.paike-it](https://erp-api.paike-it)
 
