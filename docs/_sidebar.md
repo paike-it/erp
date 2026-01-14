@@ -1,7 +1,7 @@
 <!-- 侧边栏 -->
 - 入门
     - [安装部署](starter/deploy.md)
-    <!-- - [业务流程](starter/workflow.md) -->
+    - [业务流程](starter/workflow.md)
 - 功能
     - 系统
         - [用户管理](function/system/user.md)
